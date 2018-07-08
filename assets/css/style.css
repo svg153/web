@@ -342,11 +342,20 @@ ul.list-check li::before {
 	font-size: 60px;
 	line-height: 80px;
 	margin-bottom: 16px;
-	color: #52b3d9;
-}
-.intro h1 span{
 	color: #68c3a3;
 }
+
+.intro h2{
+    font-size: 30px;
+	line-height: 80px;
+	margin-bottom: 16px;
+	color: #52b3d9;
+}
+
+.intro h1 span{
+	color: #52b3d9;
+}
+
 .intro p{
 	color: #f7f7f7;
 	margin-bottom: 40px;

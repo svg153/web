@@ -308,6 +308,32 @@
     font-weight: 600;
 }
 
+/* ── Pagination buttons (Show more / Show next year) ── */
+#talks-pagination {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0 4px;
+}
+
+.btn-show-more {
+    background: transparent;
+    border: 1px solid var(--github-border);
+    color: var(--github-link);
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 5px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn-show-more:hover {
+    background: rgba(88, 166, 255, 0.1);
+    border-color: var(--github-link);
+    color: var(--github-text);
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
     .timeline-talk-card {

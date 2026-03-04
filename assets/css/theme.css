@@ -1,0 +1,35 @@
+/* =======================================================
+   theme.css – CSS custom properties, reset, base body
+   ======================================================= */
+
+:root {
+    --github-bg: #0d1117;
+    --github-bg-secondary: #161b22;
+    --github-border: #30363d;
+    --github-text: #c9d1d9;
+    --github-text-secondary: #8b949e;
+    --github-link: #58a6ff;
+    --github-link-hover: #1f6feb;
+    --github-accent: #238636;
+    --github-star: #ffd700;
+    --github-card-bg: #0d1117;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    background-color: var(--github-bg);
+    color: var(--github-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}

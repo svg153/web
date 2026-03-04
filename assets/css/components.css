@@ -1,0 +1,211 @@
+/* =======================================================
+   components.css – shared UI: icons, social, cards, tags,
+                    skills, buttons, languages, animations
+   ======================================================= */
+
+/* ── Octicons ── */
+.octicon-img {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    filter: brightness(0) saturate(100%) invert(58%) sepia(8%) saturate(391%) hue-rotate(174deg) brightness(104%) contrast(92%);
+    opacity: 0.85;
+}
+
+.octicon-inline {
+    margin-right: 6px;
+}
+
+/* ── Social Links ── */
+.social-label {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.social-links a {
+    color: var(--github-text-secondary);
+    font-size: 20px;
+    transition: all 0.3s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-links a:hover        { transform: translateY(-3px); text-decoration: none; }
+.social-links a:focus,
+.social-links a:active,
+.social-links a:visited      { text-decoration: none; }
+
+.social-links a.linkedin:hover  { color: #0077b5; }
+.social-links a.github:hover    { color: #333; }
+.social-links a.twitter:hover   { color: #1DA1F2; }
+.social-links a.youtube:hover   { color: #FF0000; }
+.social-links a.website:hover   { color: var(--github-link); }
+.social-links a.tiktok:hover    { color: #ff0050; }
+.social-links a.star-link       { color: var(--github-star); }
+.social-links a.star-link:hover { color: var(--github-star); }
+
+/* ── Cards ── */
+.card {
+    background-color: var(--github-bg-secondary);
+    border: 1px solid var(--github-border);
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--github-text);
+}
+
+.card-subtitle {
+    font-size: 14px;
+    color: var(--github-text-secondary);
+    margin-bottom: 4px;
+}
+
+.card-date {
+    font-size: 12px;
+    color: var(--github-text-secondary);
+}
+
+.card-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 12px;
+    color: var(--github-text);
+}
+
+.card-description p  { margin-bottom: 12px; }
+.card-description ul { margin-left: 20px; margin-bottom: 12px; }
+.card-description h3 { font-size: 16px; margin: 16px 0 8px 0; }
+
+/* ── Tags ── */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tag {
+    background-color: rgba(56, 139, 253, 0.15);
+    color: var(--github-link);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    border: 1px solid rgba(56, 139, 253, 0.3);
+}
+
+/* ── Skills ── */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+}
+
+.skill-badge {
+    background-color: var(--github-bg-secondary);
+    border: 1px solid var(--github-border);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+    cursor: default;
+    user-select: none;
+}
+
+/* ── Languages ── */
+.languages {
+    display: flex;
+    gap: 16px;
+}
+
+.language {
+    padding: 8px 16px;
+    background-color: var(--github-bg-secondary);
+    border: 1px solid var(--github-border);
+    border-radius: 6px;
+}
+
+/* ── Buttons ── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    background-color: #21262d;
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: #30363d;
+    border-color: #8b949e;
+    color: #c9d1d9;
+}
+
+.btn:active {
+    background-color: #282e36;
+}
+
+.btn-primary {
+    background-color: #238636;
+    border-color: #238636;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2ea043;
+    border-color: #2ea043;
+}
+
+/* ── Animations ── */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}

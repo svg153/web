@@ -15,7 +15,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css" rel="stylesheet">
     <!-- Custom GitHub Style CSS -->
     <link href="assets/css/github-style.css" rel="stylesheet">
-    
+    <!-- Site JS -->
+    <script src="assets/js/main.js" defer></script>
+
     <link rel="icon" type="image/png" href="https://media-asgard.s3.eu-west-1.amazonaws.com/24/10/28/e875954d-cedf-4503-82f1-0c3a3276caa6_profile_2.png">
 </head>
 <body>
@@ -66,9 +68,9 @@
                     <h1 class="profile-name">Sergio Valverde García</h1>
                     <p class="profile-title">svg153 · he/him</p>
 
-                    <a href="assets/files/Sergio_Valverde_CV.pdf" class="btn follow-btn" download>
+                    <!-- <a href="assets/files/Sergio_Valverde_CV.pdf" class="btn follow-btn" download>
                         <img class="octicon-img octicon-inline" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/download.svg" alt="Download icon"> Download CV
-                    </a>
+                    </a> -->
 
                     <p class="profile-bio">
                         DevOps &amp; SRE | IaC | CI/CD | Kubernetes | All as CODE
@@ -1286,62 +1288,5 @@
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.card, .talk-card').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Talks year filter
-        function filterTalksYear(year) {
-            const section = document.getElementById('talks');
-            const items = section.querySelectorAll('.timeline-item');
-            const yearHeaders = section.querySelectorAll('.timeline-year');
-
-            document.querySelectorAll('#talks-year-nav .year-filter-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.year === year);
-            });
-
-            if (year === 'all') {
-                items.forEach(i => i.style.display = '');
-                yearHeaders.forEach(h => h.style.display = '');
-                return;
-            }
-
-            items.forEach(i => {
-                i.style.display = i.dataset.year === year ? '' : 'none';
-            });
-            yearHeaders.forEach(h => {
-                h.style.display = h.dataset.year === year ? '' : 'none';
-            });
-        }
-    </script>
 </body>
 </html>

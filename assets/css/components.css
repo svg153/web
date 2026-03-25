@@ -100,6 +100,99 @@
 .card-description ul { margin-left: 20px; margin-bottom: 12px; }
 .card-description h3 { font-size: 16px; margin: 16px 0 8px 0; }
 
+.hero-card {
+    padding: 20px;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.hero-intro {
+    display: grid;
+    gap: 10px;
+}
+
+.hero-details {
+    display: grid;
+    gap: 0;
+}
+
+.hero-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--github-text-secondary);
+    margin-bottom: 8px;
+}
+
+.hero-headline {
+    font-size: 32px;
+    line-height: 1.18;
+    font-weight: 700;
+    color: var(--github-text);
+    max-width: 12ch;
+}
+
+.hero-summary {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--github-text);
+    margin-bottom: 16px;
+}
+
+.hero-impact-list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.hero-impact-list li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--github-text);
+    font-size: 14px;
+}
+
+.hero-impact-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--github-link);
+    font-weight: 700;
+}
+
+.hero-at-a-glance {
+    display: grid;
+    gap: 14px;
+    padding-top: 16px;
+    border-top: 1px solid var(--github-border);
+}
+
+.hero-meta-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.hero-meta-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--github-text-secondary);
+    padding-top: 8px;
+}
+
+.hero-tags {
+    margin-top: 0;
+}
+
 /* ── Tags ── */
 .tags {
     display: flex;
@@ -205,6 +298,25 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .hero-headline {
+        font-size: 24px;
+        max-width: none;
+    }
+
+    .hero-meta-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .hero-meta-label {
+        padding-top: 0;
+    }
+
     .skills-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }

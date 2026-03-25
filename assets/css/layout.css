@@ -37,13 +37,13 @@
 
 /* ── Profile Section ── */
 .profile-section {
-    padding: 80px 0;
+    padding: 56px 0;
 }
 
 .profile-grid {
     display: grid;
     grid-template-columns: 280px 1fr;
-    gap: 32px;
+    gap: 28px;
 }
 
 /* ── Sidebar ── */
@@ -54,17 +54,18 @@
 }
 
 .profile-image {
-    width: 100%;
+    width: min(240px, 100%);
+    display: block;
+    margin: 0 auto 16px;
     border-radius: 50%;
     border: 1px solid var(--github-border);
-    margin-bottom: 16px;
     position: relative;
 }
 
 .github-star-badge {
     position: absolute;
     top: 0;
-    right: 20px;
+    right: 6px;
     background: transparent;
     border-radius: 0;
     width: 70px;
@@ -87,16 +88,17 @@
 }
 
 .profile-name {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 4px;
+    line-height: 1.2;
 }
 
 .profile-title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: #c9d1d9;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .profile-bio {
@@ -221,11 +223,15 @@
 
 /* ── Main Content ── */
 .profile-main {
-    padding-left: 32px;
+    padding-left: 20px;
 }
 
 .section {
     margin-bottom: 48px;
+}
+
+.section-hero {
+    margin-bottom: 36px;
 }
 
 .section-title {
@@ -258,6 +264,10 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+    .profile-section {
+        padding: 32px 0;
+    }
+
     .profile-grid {
         grid-template-columns: 1fr;
     }

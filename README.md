@@ -1,6 +1,6 @@
 # svg153.github.io
 
-Personal portfolio site for [Sergio Valverde (svg153)](https://github.com/svg153) — Platform Engineer, DevOps & SRE, GitHub Star.
+Personal portfolio site for [Sergio Valverde (svg153)](https://github.com/svg153) — Developer Platforms & AI SDLC Architect at Accenture, GitHub Star.
 
 Live at: **[svg153.github.io](https://svg153.github.io/web)**
 
